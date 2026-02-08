@@ -1,12 +1,25 @@
-# Tailwind React Integration
-
-Minimal project showing Tailwind CSS integration with Vite + React and a `UserProfile` component.
-
-Run:
-
-```bash
-npm install
-npm run dev
-```
-
-The `UserProfile` component demonstrates responsive design and interactivity using Tailwind CSS utility classes.
+{
+  "name": "tailwind-react-integration",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0",         // ✅ This MUST be here
+    "@tailwindcss/vite": "^4.0.0"    // ✅ This MUST be here
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "vite": "^5.4.1"
+  }
+}
