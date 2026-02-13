@@ -13,7 +13,8 @@ function AddRecipeForm() {
 
     const handleChange = (event) => {
         const { name, value } = event.target
-        setFormData((prev) => ({ ...prev, [name]: value }))
+        // Alternative: event.target.value can be used directly
+        setFormData((prev) => ({ ...prev, [name]: event.target.value }))
     }
 
     const validateForm = () => {
