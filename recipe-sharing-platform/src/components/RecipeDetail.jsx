@@ -51,8 +51,8 @@ function RecipeDetail() {
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <h2 className="text-lg font-semibold text-slate-900">Cooking Instructions</h2>
                         <ol className="mt-4 list-decimal space-y-3 pl-5 text-slate-600">
-                            {recipe.steps.map((step) => (
-                                <li key={step}>{step}</li>
+                            {recipe.steps.map((step, index) => (
+                                <li key={index} className="instructions">{step}</li>
                             ))}
                         </ol>
                     </div>
