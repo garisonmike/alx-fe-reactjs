@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "title": "Spaghetti Carbonara",
+        "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+        "image": "https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=800&q=80",
+        "ingredients": [
+            "200g spaghetti",
+            "2 large eggs",
+            "80g grated pecorino or parmesan",
+            "100g pancetta or bacon",
+            "Freshly ground black pepper",
+            "Salt"
+        ],
+        "steps": [
+            "Boil the spaghetti in salted water until al dente.",
+            "Crisp the pancetta in a pan and set aside.",
+            "Whisk eggs with cheese and pepper.",
+            "Toss hot pasta with pancetta, then remove from heat and add egg mixture.",
+            "Stir quickly until creamy and serve immediately."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Chicken Tikka Masala",
+        "summary": "Grilled chicken cooked in a creamy tomato sauce with warming spices.",
+        "image": "https://images.unsplash.com/photo-1598515213692-5f252c63c49a?auto=format&fit=crop&w=800&q=80",
+        "ingredients": [
+            "500g chicken thighs, cubed",
+            "150g plain yogurt",
+            "2 tbsp tikka masala paste",
+            "1 onion, sliced",
+            "400g canned tomatoes",
+            "120ml heavy cream"
+        ],
+        "steps": [
+            "Marinate chicken with yogurt and tikka masala paste for 30 minutes.",
+            "Sear chicken pieces until lightly charred.",
+            "Saute onion, then add tomatoes and simmer.",
+            "Return chicken to the pan and add cream.",
+            "Simmer until thickened and serve with rice."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Berry Chia Parfait",
+        "summary": "A quick, layered breakfast with chia pudding, yogurt, and fresh berries.",
+        "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
+        "ingredients": [
+            "3 tbsp chia seeds",
+            "240ml almond milk",
+            "1 tsp honey",
+            "150g Greek yogurt",
+            "1 cup mixed berries",
+            "Granola for topping"
+        ],
+        "steps": [
+            "Whisk chia seeds, almond milk, and honey. Chill for 2 hours.",
+            "Layer chia pudding with yogurt in a glass.",
+            "Top with mixed berries and granola.",
+            "Serve chilled."
+        ]
+    }
+]
