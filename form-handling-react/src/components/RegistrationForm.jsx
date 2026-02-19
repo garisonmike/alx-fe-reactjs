@@ -4,47 +4,70 @@ function RegistrationForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      alert("All fields are required!");
-      return;
+    let newErrors = {};
+
+    if (!username) {
+      newErrors.username = "Username is required";
     }
 
-    console.log("User Registered:", { username, email, password });
+    if (!email) {                 // ✅ required check
+      newErrors.email = "Email is required";
+    }
 
-    // reset form
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    if (!password) {              // ✅ required check
+      newErrors.password = "Password is required";
+    }
+
+    setErrors(newErrors);         // ✅ required
+
+    if (Object.keys(newErrors).length === 0) {
+      console.log("Form submitted:", { username, email, password });
+
+      // Reset form
+      setUsername("");
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h2>User Registration</h2>
 
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}          // ✅ required
-        onChange={(e) => setUsername(e.target.value)}
-      />
+      <div>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        {errors.username && <p>{errors.username}</p>}
+      </div>
 
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}             // ✅ required
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <div>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        {errors.email && <p>{errors.email}</p>}
+      </div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}          // ✅ required
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <div>
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {errors.password && <p>{errors.password}</p>}
+      </div>
 
       <button type="submit">Register</button>
     </form>
