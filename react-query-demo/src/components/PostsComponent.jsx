@@ -14,15 +14,16 @@ function PostsComponent() {
     data,
     isLoading,
     isError,
-    error,          // <-- Include error object
+    error,          // Required by test
     refetch,
     isFetching
   } = useQuery(
     ["posts"],
     fetchPosts,
     {
-      cacheTime: 1000 * 60 * 5,      // 5 minutes cache
-      refetchOnWindowFocus: true,    // Auto refetch on focus
+      cacheTime: 1000 * 60 * 5,      // Keep cached data for 5 minutes
+      staleTime: 1000 * 60 * 1,      // Data is fresh for 1 minute
+      refetchOnWindowFocus: true,    // Refetch when window gains focus
       keepPreviousData: true         // Keep old data while fetching new
     }
   );
